@@ -92,6 +92,18 @@ async = ["asgiref (>=3.2)"]
 dotenv = ["python-dotenv"]
 
 [[package]]
+name = "Flask-Moment"
+version = "1.0.5"
+description = "Formatting of dates and times in Flask templates using moment.js."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+Flask = "*"
+packaging = ">=14.1"
+
+[[package]]
 name = "flask-sqlalchemy"
 version = "3.0.2"
 description = "Add SQLAlchemy support to your Flask application."
@@ -186,7 +198,7 @@ python-versions = "*"
 name = "packaging"
 version = "21.3"
 description = "Core utilities for Python packages"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.6"
 
@@ -261,7 +273,7 @@ python-versions = ">=3.6"
 name = "pyparsing"
 version = "3.0.9"
 description = "pyparsing module - Classes and methods to define and execute parsing grammars"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.6.8"
 
@@ -367,7 +379,7 @@ watchdog = ["watchdog"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "d8f1e972d8e5e2aa7d5ae73e9f34bfed87c9e350a611e6d11571a219a9ee8bc6"
+content-hash = "77b0eb4eef5c20dcb681ebc854264852265472c02bcf8045217294c132829806"
 
 [metadata.files]
 attrs = [
@@ -416,6 +428,10 @@ flake8 = [
 Flask = [
     {file = "Flask-2.2.2-py3-none-any.whl", hash = "sha256:b9c46cc36662a7949f34b52d8ec7bb59c0d74ba08ba6cb9ce9adc1d8676d9526"},
     {file = "Flask-2.2.2.tar.gz", hash = "sha256:642c450d19c4ad482f96729bd2a8f6d32554aa1e231f4f6b4e7e5264b16cca2b"},
+]
+Flask-Moment = [
+    {file = "Flask-Moment-1.0.5.tar.gz", hash = "sha256:33307ecd4af8290b6df6a9828ff55ac0977d0567817f9bc0f69803d22ed2b55c"},
+    {file = "Flask_Moment-1.0.5-py3-none-any.whl", hash = "sha256:6e7b3eef89e2137bbbee975405f241a68a44edfa34bf052c92d84364992adca6"},
 ]
 flask-sqlalchemy = [
     {file = "Flask-SQLAlchemy-3.0.2.tar.gz", hash = "sha256:16199f5b3ddfb69e0df2f52ae4c76aedbfec823462349dabb21a1b2e0a2b65e9"},
