@@ -3,4 +3,11 @@
     <h1>Hello, World!</h1>
     <p>The local date and time is {{ moment(current_time).format('LLL') }}</p>
     <p>That was {{ moment(current_time).fromNow(refresh=True) }}</p>
+
+    <form  method="post">
+        {{ form.hidden_tag() }}
+        {{ form.name.label }}<br>
+        {{ form.name() }} <br><br>
+        {{ form.submit() }}
+    </form>
 {% endblock %}
