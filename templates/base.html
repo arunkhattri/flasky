@@ -49,6 +49,17 @@
     </nav>
     <div class="container-fluid">
         {% block content %}
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <div class="alert alert-primary" role="alert">
+                        {% for message in messages %}
+                        <button class="close" type="button" data-dismiss="alert">&times;</button>
+                            {{ message }}
+                    </div>
+                        {% endfor %}
+                {% endif %}
+            {% endwith %}
+            {% block page_content %}{% endblock %}
         {% endblock %}
     </div>
 
