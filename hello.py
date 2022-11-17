@@ -1,4 +1,5 @@
-#!/usr/bin/env python3
+"""Flask Web Development, 2nd Ed, Miguel Grinberg."""
+# /usr/bin/env python3
 from datetime import datetime
 from flask import Flask, render_template
 from flask_moment import Moment
@@ -15,12 +16,15 @@ moment = Moment(app)
 
 
 class NameForm(FlaskForm):
+    """defines the list of fields in the form."""
+
     name = StringField("What is your name?", validators=[DataRequired()])
     submit = SubmitField("Submit")
 
 
 @app.route("/", methods=["GET", "POST"])
 def index():
+    """Register handler for the application's root URL."""
     name = None
     form = NameForm()
     if form.validate_on_submit():
@@ -34,15 +38,18 @@ def index():
 # dynamic routes
 @app.route("/user<name>")
 def user(name):
+    """Return dynamic user page."""
     return render_template("user.html", name=name)
 
 
 # custom error pages
 @app.errorhandler(404)
 def page_not_found(e):
+    """Return error 404 page."""
     return render_template("404.html"), 404
 
 
 @app.errorhandler(500)
 def internal_server_error(e):
+    """Return internal server error page."""
     return render_template("500.html"), 500
